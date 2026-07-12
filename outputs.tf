@@ -1,3 +1,7 @@
+output "resource_group_cost_management_views_id" {
+  description = "Map of id values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
+  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.id }
+}
 output "resource_group_cost_management_views_accumulated" {
   description = "Map of accumulated values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
   value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.accumulated }
