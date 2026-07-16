@@ -1,45 +1,45 @@
 output "resource_group_cost_management_views_id" {
   description = "Map of id values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
-  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.id }
+  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.id if v.id != null && length(v.id) > 0 }
 }
 output "resource_group_cost_management_views_accumulated" {
   description = "Map of accumulated values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
-  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.accumulated }
+  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.accumulated if v.accumulated != null }
 }
 output "resource_group_cost_management_views_chart_type" {
   description = "Map of chart_type values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
-  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.chart_type }
+  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.chart_type if v.chart_type != null && length(v.chart_type) > 0 }
 }
 output "resource_group_cost_management_views_dataset" {
   description = "Map of dataset values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
-  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.dataset }
+  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.dataset if v.dataset != null && length(v.dataset) > 0 }
 }
 output "resource_group_cost_management_views_display_name" {
   description = "Map of display_name values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
-  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.display_name }
+  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.display_name if v.display_name != null && length(v.display_name) > 0 }
 }
 output "resource_group_cost_management_views_kpi" {
   description = "Map of kpi values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
-  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.kpi }
+  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.kpi if v.kpi != null && length(v.kpi) > 0 }
 }
 output "resource_group_cost_management_views_name" {
   description = "Map of name values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
-  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.name }
+  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.name if v.name != null && length(v.name) > 0 }
 }
 output "resource_group_cost_management_views_pivot" {
   description = "Map of pivot values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
-  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.pivot }
+  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.pivot if v.pivot != null && length(v.pivot) > 0 }
 }
 output "resource_group_cost_management_views_report_type" {
   description = "Map of report_type values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
-  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.report_type }
+  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.report_type if v.report_type != null && length(v.report_type) > 0 }
 }
 output "resource_group_cost_management_views_resource_group_id" {
   description = "Map of resource_group_id values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
-  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.resource_group_id }
+  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.resource_group_id if v.resource_group_id != null && length(v.resource_group_id) > 0 }
 }
 output "resource_group_cost_management_views_timeframe" {
   description = "Map of timeframe values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
-  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.timeframe }
+  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.timeframe if v.timeframe != null && length(v.timeframe) > 0 }
 }
 
