@@ -12,7 +12,7 @@ output "resource_group_cost_management_views_chart_type" {
 }
 output "resource_group_cost_management_views_dataset" {
   description = "Map of dataset values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
-  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => v.dataset if v.dataset != null && length(v.dataset) > 0 }
+  value       = { for k, v in azurerm_resource_group_cost_management_view.resource_group_cost_management_views : k => one(v.dataset) if v.dataset != null && length(v.dataset) > 0 }
 }
 output "resource_group_cost_management_views_display_name" {
   description = "Map of display_name values across all resource_group_cost_management_views, keyed the same as var.resource_group_cost_management_views"
